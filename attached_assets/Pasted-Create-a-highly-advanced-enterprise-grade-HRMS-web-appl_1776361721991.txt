@@ -1,0 +1,53 @@
+Create a highly advanced, enterprise-grade HRMS web application with ultra-smooth performance, modern UI/UX, and real-time responsiveness. The system must support two primary roles: Admin and Employee, each with fully separate dashboards and controlled access.
+
+The login system should include secure authentication with role-based redirection (Admin Dashboard / Employee Dashboard).
+
+EMPLOYEE FEATURES:
+The employee dashboard should provide a clean, modern, mobile-friendly interface with real-time data visualization.
+
+Employees must be able to mark attendance using their mobile device with GPS-based geo-fencing. Attendance should only be allowed within a predefined office radius. If an employee exits the geo-fenced area and remains outside for more than 1 hour, the system should automatically trigger punch-out.
+
+The dashboard must include:
+
+* Live working hours tracker (auto-calculated)
+* Punch-in / Punch-out timestamps
+* Attendance history (daily, weekly, monthly views)
+* Leave management system (apply for Casual Leave, Paid Leave, Sick Leave, RH, etc.)
+* Leave balance tracking
+* Real-time attendance status (Present, Absent, Late, Half-day)
+* Notifications for approvals, attendance anomalies, and reminders
+* Task or activity tracking (optional but recommended)
+* Profile management (documents, contact info)
+
+ADMIN FEATURES:
+The admin dashboard should be data-rich, fast, and provide complete organizational control.
+
+Admin must be able to:
+
+* Add, edit, and manage employees
+* Assign roles, departments, and shifts
+* Define geo-fencing boundaries (map-based radius setup)
+* View real-time attendance of all employees
+* Access detailed reports (attendance, leave, productivity)
+* Approve/reject leave requests
+* Manage payroll system (salary calculation based on attendance & leaves)
+* Monitor late entries, early exits, overtime
+* Export reports (PDF/Excel)
+* Configure company policies (leave rules, working hours, holidays)
+
+ADVANCED FEATURES (DIFFERENTIATOR – MUST INCLUDE):
+
+* Real-time location tracking during work hours (with consent)
+* AI-based attendance insights (late trends, absentee prediction)
+* Smart alerts for abnormal behavior (frequent exits, fake attendance attempts)
+* Face verification or selfie capture during punch-in (optional)
+* Offline attendance sync (if internet unavailable)
+* Performance analytics dashboard
+* Multi-branch / multi-location support
+* Dark mode + ultra-modern UI animations (glassmorphism / neumorphism)
+* Ultra-fast loading (no lag, optimized rendering)
+
+TECH EXPERIENCE REQUIREMENT:
+The application must feel premium like a SaaS product (similar to modern tools like Notion or Slack), with smooth transitions, zero lag, and highly responsive design across mobile and desktop.
+
+Ensure security, scalability, and modular architecture so that future integrations (biometric devices, APIs, payroll systems) can be added easily.
