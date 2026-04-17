@@ -40,6 +40,32 @@ router.post("/auth/login", async (req, res, next) => {
   }
 });
 
+router.post("/auth/change-password", async (req, res, next) => {
+  try {
+    const me = await requireAuth(req);
+    if (!me) return res.status(401).json({ error: "Not authenticated" });
+
+    const { currentPassword, newPassword } = req.body;
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ error: "Current and new password are required" });
+    }
+    if (newPassword.length < 6) {
+      return res.status(400).json({ error: "New password must be at least 6 characters" });
+    }
+    if (!verifyPassword(currentPassword, me.passwordHash)) {
+      return res.status(401).json({ error: "Current password is incorrect" });
+    }
+
+    await db.update(employeesTable)
+      .set({ passwordHash: hashPassword(newPassword) })
+      .where(eq(employeesTable.id, me.id));
+
+    return res.json({ message: "Password changed successfully" });
+  } catch (err) {
+    next(err);
+  }
+});
+
 router.post("/auth/logout", async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;

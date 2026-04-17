@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/contexts/AuthContext";
+import { ChangePasswordDialog } from "./ChangePasswordDialog";
 import { 
   LayoutDashboard, 
   Users, 
@@ -13,6 +14,7 @@ import {
   BarChart3, 
   Bell, 
   LogOut,
+  KeyRound,
   Sun,
   Moon,
   Menu
@@ -50,6 +52,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const { employee, logout } = useAuth();
   const [location] = useLocation();
   const { theme, setTheme } = useTheme();
+  const [changePwdOpen, setChangePwdOpen] = useState(false);
 
   const NavContent = () => (
     <nav className="flex flex-col space-y-1 mt-6">
@@ -135,6 +138,10 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => setChangePwdOpen(true)} className="cursor-pointer">
+                  <KeyRound className="mr-2 h-4 w-4" />
+                  <span>Change Password</span>
+                </DropdownMenuItem>
                 <DropdownMenuItem onClick={logout} className="text-destructive focus:text-destructive cursor-pointer">
                   <LogOut className="mr-2 h-4 w-4" />
                   <span>Log out</span>
@@ -143,6 +150,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             </DropdownMenu>
           </div>
         </header>
+        <ChangePasswordDialog open={changePwdOpen} onOpenChange={setChangePwdOpen} />
 
         {/* Page Content */}
         <div className="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto">
