@@ -1027,6 +1027,8 @@ components:
           type: string
         branchId:
           type: integer
+        avatarUrl:
+          type: string
 
     EmployeeSummary:
       type: object

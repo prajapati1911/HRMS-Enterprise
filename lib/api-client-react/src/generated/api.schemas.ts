@@ -92,6 +92,7 @@ export interface UpdateEmployeeBody {
   salary?: number;
   status?: string;
   branchId?: number;
+  avatarUrl?: string;
 }
 
 export type EmployeeSummaryByDepartmentItem = {

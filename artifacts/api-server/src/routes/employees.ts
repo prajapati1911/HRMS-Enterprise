@@ -129,22 +129,30 @@ router.get("/employees/:id", async (req, res, next) => {
 router.put("/employees/:id", async (req, res, next) => {
   try {
     const me = await requireAuth(req);
-    if (!me || me.role !== "admin") return res.status(403).json({ error: "Forbidden" });
+    if (!me) return res.status(401).json({ error: "Not authenticated" });
 
     const id = Number(req.params.id);
-    const { firstName, lastName, phone, role, departmentId, designation, shift, salary, status, branchId } = req.body;
+    const isAdmin = me.role === "admin";
+    const isSelf = me.id === id;
+
+    if (!isAdmin && !isSelf) return res.status(403).json({ error: "Forbidden" });
+
+    const { firstName, lastName, phone, role, departmentId, designation, shift, salary, status, branchId, avatarUrl } = req.body;
 
     const updates: Record<string, unknown> = {};
-    if (firstName !== undefined) updates.firstName = firstName;
-    if (lastName !== undefined) updates.lastName = lastName;
+    if (isAdmin) {
+      if (firstName !== undefined) updates.firstName = firstName;
+      if (lastName !== undefined) updates.lastName = lastName;
+      if (role !== undefined) updates.role = role;
+      if (departmentId !== undefined) updates.departmentId = departmentId;
+      if (designation !== undefined) updates.designation = designation;
+      if (shift !== undefined) updates.shift = shift;
+      if (salary !== undefined) updates.salary = String(salary);
+      if (status !== undefined) updates.status = status;
+      if (branchId !== undefined) updates.branchId = branchId;
+    }
     if (phone !== undefined) updates.phone = phone;
-    if (role !== undefined) updates.role = role;
-    if (departmentId !== undefined) updates.departmentId = departmentId;
-    if (designation !== undefined) updates.designation = designation;
-    if (shift !== undefined) updates.shift = shift;
-    if (salary !== undefined) updates.salary = String(salary);
-    if (status !== undefined) updates.status = status;
-    if (branchId !== undefined) updates.branchId = branchId;
+    if (avatarUrl !== undefined) updates.avatarUrl = avatarUrl;
 
     const [updated] = await db.update(employeesTable).set(updates).where(eq(employeesTable.id, id)).returning();
     if (!updated) return res.status(404).json({ error: "Employee not found" });
