@@ -14,6 +14,10 @@ export const payrollTable = pgTable("payroll", {
   leaveDays: integer("leave_days").notNull().default(0),
   overtimeHours: numeric("overtime_hours", { precision: 5, scale: 2 }).notNull().default("0"),
   overtimePay: numeric("overtime_pay", { precision: 12, scale: 2 }).notNull().default("0"),
+  pfDeduction: numeric("pf_deduction", { precision: 12, scale: 2 }).notNull().default("0"),
+  taxDeduction: numeric("tax_deduction", { precision: 12, scale: 2 }).notNull().default("0"),
+  absentDeduction: numeric("absent_deduction", { precision: 12, scale: 2 }).notNull().default("0"),
+  reimbursementAmount: numeric("reimbursement_amount", { precision: 12, scale: 2 }).notNull().default("0"),
   deductions: numeric("deductions", { precision: 12, scale: 2 }).notNull().default("0"),
   netSalary: numeric("net_salary", { precision: 12, scale: 2 }).notNull(),
   status: text("status").notNull().default("draft"), // draft, processed, paid

@@ -17,7 +17,9 @@ import {
   KeyRound,
   Sun,
   Moon,
-  Menu
+  Menu,
+  Receipt,
+  Navigation
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
@@ -42,6 +44,8 @@ const navItems = [
   { href: "/admin/attendance", label: "Attendance", icon: Clock },
   { href: "/admin/leaves", label: "Leaves", icon: CalendarDays },
   { href: "/admin/payroll", label: "Payroll", icon: Banknote },
+  { href: "/admin/reimbursements", label: "Reimbursements", icon: Receipt },
+  { href: "/admin/on-duty", label: "On-Duty", icon: Navigation },
   { href: "/admin/departments", label: "Departments", icon: Building2 },
   { href: "/admin/geofence", label: "Geo-fence", icon: MapPin },
   { href: "/admin/holidays", label: "Holidays", icon: CalendarRange },

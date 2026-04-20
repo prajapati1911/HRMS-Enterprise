@@ -11,6 +11,8 @@ import geofencesRouter from "./geofences";
 import holidaysRouter from "./holidays";
 import reportsRouter from "./reports";
 import dashboardRouter from "./dashboard";
+import reimbursementsRouter from "./reimbursements";
+import onDutyRouter from "./on_duty";
 
 const router: IRouter = Router();
 
@@ -26,5 +28,7 @@ router.use(geofencesRouter);
 router.use(holidaysRouter);
 router.use(reportsRouter);
 router.use(dashboardRouter);
+router.use(reimbursementsRouter);
+router.use(onDutyRouter);
 
 export default router;

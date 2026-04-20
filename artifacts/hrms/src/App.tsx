@@ -24,6 +24,8 @@ import AdminGeofence from "@/pages/admin/geofence";
 import AdminHolidays from "@/pages/admin/holidays";
 import AdminReports from "@/pages/admin/reports";
 import AdminNotifications from "@/pages/admin/notifications";
+import AdminReimbursements from "@/pages/admin/reimbursements";
+import AdminOnDuty from "@/pages/admin/on-duty";
 
 // Employee Pages
 import EmployeeDashboard from "@/pages/employee/dashboard";
@@ -32,6 +34,8 @@ import EmployeeLeaves from "@/pages/employee/leaves";
 import EmployeePayroll from "@/pages/employee/payroll";
 import EmployeeNotifications from "@/pages/employee/notifications";
 import EmployeeProfile from "@/pages/employee/profile";
+import EmployeeReimbursements from "@/pages/employee/reimbursements";
+import EmployeeOnDuty from "@/pages/employee/on-duty";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -58,6 +62,8 @@ function AdminRoutes() {
         <Route path="/admin/holidays" component={AdminHolidays} />
         <Route path="/admin/reports" component={AdminReports} />
         <Route path="/admin/notifications" component={AdminNotifications} />
+        <Route path="/admin/reimbursements" component={AdminReimbursements} />
+        <Route path="/admin/on-duty" component={AdminOnDuty} />
         <Route><div>Admin route not found</div></Route>
       </Switch>
     </AdminLayout>
@@ -72,6 +78,8 @@ function EmployeeRoutes() {
         <Route path="/employee/attendance" component={EmployeeAttendance} />
         <Route path="/employee/leaves" component={EmployeeLeaves} />
         <Route path="/employee/payroll" component={EmployeePayroll} />
+        <Route path="/employee/reimbursements" component={EmployeeReimbursements} />
+        <Route path="/employee/on-duty" component={EmployeeOnDuty} />
         <Route path="/employee/notifications" component={EmployeeNotifications} />
         <Route path="/employee/profile" component={EmployeeProfile} />
         <Route><div>Employee route not found</div></Route>
@@ -84,7 +92,7 @@ function AppRouter() {
   return (
     <Switch>
       <Route path="/login" component={Login} />
-      
+
       <Route path="/admin/*">
         <ProtectedRoute allowedRoles={["admin"]}>
           <AdminRoutes />

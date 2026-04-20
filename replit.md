@@ -1,8 +1,8 @@
-# HRMS - Enterprise HR Management System
+# BharatHR - Indian HR Management System
 
 ## Overview
 
-A full-stack, enterprise-grade HRMS (Human Resource Management System) with separate Admin and Employee dashboards, GPS-based geo-fenced attendance, leave management, payroll, real-time insights, and AI-powered analytics.
+A full-stack, enterprise-grade Indian HRMS (Human Resource Management System) with separate Admin and Employee portals. Features Indian saffron/orange theme, Indian employee names, ₹ Rupee currency, PF + TDS payroll calculation, reimbursements with approval workflow, on-duty filing, Excel payroll export, profile picture upload, and geofenced attendance.
 
 ## Stack
 

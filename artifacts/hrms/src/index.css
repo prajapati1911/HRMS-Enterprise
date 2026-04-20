@@ -66,54 +66,55 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* LIGHT MODE */
+/* LIGHT MODE — Indian Saffron Theme */
 :root {
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
-  
+  --background: 30 50% 97%;
+  --foreground: 20 30% 12%;
+
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --card-border: 214 32% 91%;
-  
+  --card-foreground: 20 30% 12%;
+  --card-border: 30 40% 88%;
+
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --popover-border: 214 32% 91%;
-  
-  --primary: 221 83% 53%;
-  --primary-foreground: 210 40% 98%;
-  
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  
-  --muted: 210 40% 96%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  
-  --accent: 210 40% 96%;
-  --accent-foreground: 222 47% 11%;
-  
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --popover-foreground: 20 30% 12%;
+  --popover-border: 30 40% 88%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221 83% 53%;
+  /* Saffron primary */
+  --primary: 27 96% 54%;
+  --primary-foreground: 0 0% 100%;
 
-  --chart-1: 221 83% 53%;
-  --chart-2: 173 58% 39%;
-  --chart-3: 197 37% 24%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
+  --secondary: 30 60% 94%;
+  --secondary-foreground: 20 30% 12%;
+
+  --muted: 30 40% 94%;
+  --muted-foreground: 20 15% 46%;
+
+  --accent: 30 60% 94%;
+  --accent-foreground: 20 30% 12%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 30 35% 88%;
+  --input: 30 35% 88%;
+  --ring: 27 96% 54%;
+
+  --chart-1: 27 96% 54%;
+  --chart-2: 142 76% 36%;
+  --chart-3: 197 71% 38%;
+  --chart-4: 45 93% 58%;
+  --chart-5: 340 75% 55%;
 
   --sidebar: 0 0% 100%;
-  --sidebar-foreground: 222 47% 11%;
-  --sidebar-border: 214 32% 91%;
-  --sidebar-primary: 221 83% 53%;
-  --sidebar-primary-foreground: 210 40% 98%;
-  --sidebar-accent: 210 40% 96%;
-  --sidebar-accent-foreground: 222 47% 11%;
-  --sidebar-ring: 221 83% 53%;
+  --sidebar-foreground: 20 30% 12%;
+  --sidebar-border: 30 40% 88%;
+  --sidebar-primary: 27 96% 54%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 30 60% 94%;
+  --sidebar-accent-foreground: 20 30% 12%;
+  --sidebar-ring: 27 96% 54%;
 
-  --app-font-sans: 'Inter', sans-serif;
+  --app-font-sans: 'Poppins', 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0.75rem;
@@ -125,51 +126,53 @@
   --elevate-2: rgba(0,0,0, .08);
 }
 
+/* DARK MODE — Deep Navy with Saffron accents */
 .dark {
-  --background: 231 39% 9%;
-  --foreground: 210 40% 98%;
-  
-  --card: 231 39% 12%;
-  --card-foreground: 210 40% 98%;
-  --card-border: 231 39% 18%;
-  
-  --popover: 231 39% 12%;
-  --popover-foreground: 210 40% 98%;
-  --popover-border: 231 39% 18%;
-  
-  --primary: 221 83% 60%;
-  --primary-foreground: 210 40% 98%;
-  
-  --secondary: 231 39% 16%;
-  --secondary-foreground: 210 40% 98%;
-  
-  --muted: 231 39% 16%;
-  --muted-foreground: 215 20.2% 65.1%;
-  
-  --accent: 231 39% 20%;
-  --accent-foreground: 210 40% 98%;
-  
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --background: 224 40% 8%;
+  --foreground: 30 30% 95%;
 
-  --border: 231 39% 20%;
-  --input: 231 39% 20%;
-  --ring: 221 83% 60%;
+  --card: 224 40% 11%;
+  --card-foreground: 30 30% 95%;
+  --card-border: 224 35% 18%;
 
-  --chart-1: 221 83% 60%;
-  --chart-2: 173 58% 49%;
-  --chart-3: 197 37% 34%;
-  --chart-4: 43 74% 56%;
-  --chart-5: 27 87% 57%;
+  --popover: 224 40% 11%;
+  --popover-foreground: 30 30% 95%;
+  --popover-border: 224 35% 18%;
 
-  --sidebar: 231 39% 10%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-border: 231 39% 18%;
-  --sidebar-primary: 221 83% 60%;
-  --sidebar-primary-foreground: 210 40% 98%;
-  --sidebar-accent: 231 39% 16%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-ring: 221 83% 60%;
+  /* Saffron primary — slightly brighter in dark */
+  --primary: 27 96% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 224 35% 16%;
+  --secondary-foreground: 30 30% 95%;
+
+  --muted: 224 35% 16%;
+  --muted-foreground: 224 15% 62%;
+
+  --accent: 224 35% 20%;
+  --accent-foreground: 30 30% 95%;
+
+  --destructive: 0 62% 31%;
+  --destructive-foreground: 30 30% 95%;
+
+  --border: 224 35% 20%;
+  --input: 224 35% 20%;
+  --ring: 27 96% 60%;
+
+  --chart-1: 27 96% 60%;
+  --chart-2: 142 76% 46%;
+  --chart-3: 197 71% 48%;
+  --chart-4: 45 93% 58%;
+  --chart-5: 340 75% 60%;
+
+  --sidebar: 224 40% 9%;
+  --sidebar-foreground: 30 30% 95%;
+  --sidebar-border: 224 35% 18%;
+  --sidebar-primary: 27 96% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 224 35% 16%;
+  --sidebar-accent-foreground: 30 30% 95%;
+  --sidebar-ring: 27 96% 60%;
 
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
@@ -191,5 +194,13 @@
 @layer utilities {
   .glass-panel {
     @apply bg-card/80 backdrop-blur-xl border border-card-border shadow-xl;
+  }
+
+  .india-gradient {
+    background: linear-gradient(135deg, hsl(27 96% 54%), hsl(340 75% 55%));
+  }
+
+  .rupee-green {
+    color: hsl(142 76% 36%);
   }
 }
