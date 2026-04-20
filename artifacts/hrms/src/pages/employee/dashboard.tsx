@@ -176,7 +176,7 @@ export default function EmployeeDashboard() {
               <p className="text-sm font-medium text-muted-foreground">Next Payslip</p>
               {dashboard.payslip ? (
                 <div className="flex items-baseline gap-2">
-                  <h3 className="text-2xl font-bold">${dashboard.payslip.netSalary}</h3>
+                  <h3 className="text-2xl font-bold">₹{Number(dashboard.payslip.netSalary).toLocaleString("en-IN")}</h3>
                 </div>
               ) : (
                 <div className="text-sm font-medium text-muted-foreground mt-1">Processing...</div>

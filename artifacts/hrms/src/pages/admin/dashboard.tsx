@@ -104,7 +104,7 @@ export default function AdminDashboard() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold">${dashboard.monthlyPayroll.toLocaleString()}</div>
+            <div className="text-3xl font-bold">₹{dashboard.monthlyPayroll.toLocaleString("en-IN")}</div>
             <p className="text-xs text-muted-foreground mt-1">Estimated for current month</p>
           </CardContent>
         </Card>
